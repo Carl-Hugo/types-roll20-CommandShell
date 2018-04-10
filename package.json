@@ -1,0 +1,27 @@
+{
+    "name": "@types/roll20-commandshell",
+    "version": "1.0.0",
+    "description": "Type definition file for Roll20 CommandShell API script.",
+    "author": "Carl-Hugo Marcotte (https://github.com/Carl-Hugo)",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Carl-Hugo/types-roll20-CommandShell"
+    },
+    "publishConfig": {
+        "registry": "https://www.myget.org/F/roll20/npm/"
+    },
+    "keywords": [
+        "roll20",
+        "typescript",
+        "typescript-definition",
+        "CommandShell"
+    ],
+    "bugs": {
+        "url": "https://github.com/Carl-Hugo/types-roll20-CommandShell/issues"
+    },
+    "homepage": "https://github.com/Carl-Hugo/types-roll20-CommandShell#readme",
+    "devDependencies": {
+        "@types/roll20": "^1.0.1"
+    }
+}
