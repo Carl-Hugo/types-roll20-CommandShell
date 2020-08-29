@@ -8,7 +8,7 @@ Type definition file for Roll20 [CommandShell](https://github.com/Roll20/roll20-
 npm i types-roll20-commandshell --save-dev
 ```
 
-See https://www.npmjs.com/package/types-roll20
+See https://www.npmjs.com/package/types-roll20-commandshell
 
 ## How to contribute?
 
