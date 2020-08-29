@@ -1,0 +1,33 @@
+name: Deploy to NPM
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0 # avoid shallow clone so nbgv can do its work.
+
+      - uses: dotnet/nbgv@master
+        id: nbgv
+        with:
+          stamp: package.json
+        env:
+          PublicRelease: ${{ github.event_name == 'push' }}
+
+      - name: Setup node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
+          registry-url: https://registry.npmjs.org/
+
+      - run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
